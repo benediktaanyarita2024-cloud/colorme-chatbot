@@ -31,7 +31,7 @@ python app.py                    # buka http://127.0.0.1:5000
 
 ## Screenshots
 
-![Halaman awal](screenshots/01-halaman-awal.png)
-![Tebak undertone](screenshots/03-tebak-undertone.png)
-![Rekomendasi hijab](screenshots/04-rekomendasi-hijab.png)
-![Fallback](screenshots/07-fallback.png)
+![Halaman awal](screenshots/01-halaman-awal.jpg)
+![Tebak undertone](screenshots/03-tebak-undertone.jpg)
+![Rekomendasi hijab](screenshots/04-rekomendasi-hijab.jpg)
+![Fallback](screenshots/07-fallback.jpg)
