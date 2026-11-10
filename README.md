@@ -28,3 +28,10 @@ python app.py                    # buka http://127.0.0.1:5000
 | `evaluasi/colorme.csv` | 38 kalimat uji, termasuk 5 pertanyaan di luar tema |
 | `tests/` | Kasus uji disesuaikan dengan ColorMe |
 | `cli.py`, `evaluate.py` | Tema bawaan diganti menjadi `colorme` |
+
+## Screenshots
+
+![Halaman awal](screenshots/01-halaman-awal.png)
+![Tebak undertone](screenshots/03-tebak-undertone.png)
+![Rekomendasi hijab](screenshots/04-rekomendasi-hijab.png)
+![Fallback](screenshots/07-fallback.png)
