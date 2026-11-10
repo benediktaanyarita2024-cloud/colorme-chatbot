@@ -1,0 +1,39 @@
+kalimat,intent
+hai kak,salam
+assalamualaikum min,salam
+kamu ini bot apa sih,identitas
+bot ini bisa bantu apa aja,identitas
+undertone itu maksudnya apa,pengertian_undertone
+jenis jenis undertone apa aja,jenis_undertone
+bedanya skintone sama undertone apa,beda_skintone_undertone
+penting gak sih tau undertone,manfaat_undertone
+gimana cara cek undertone aku,cara_cek_undertone
+cara tes undertone di rumah,cara_cek_undertone
+urat aku ijo kak,ciri_urat_hijau
+urat nadiku keliatan hijau,ciri_urat_hijau
+uratku warnanya biru,ciri_urat_biru
+urat di pergelangan tanganku ungu,ciri_urat_biru
+uratku campur hijau biru gitu,ciri_urat_campur
+aku cocoknya pake gold,ciri_emas
+kalo pake kalung perak keliatan bagus,ciri_perak
+emas sama perak dua duanya cocok,ciri_emas_perak
+kulitku gampang item kalo kena matahari,ciri_matahari_cokelat
+kena matahari dikit langsung merah,ciri_matahari_merah
+gimana tes pake kertas putih,ciri_kertas_putih
+outfit yang cocok buat warm apa,baju_warm
+baju warna apa yang cocok untuk cool undertone,baju_cool
+pakaian buat neutral undertone,baju_neutral
+kerudung yang cocok buat warm undertone,hijab_warm
+jilbab buat cool undertone warna apa,hijab_cool
+hijab untuk neutral,hijab_neutral
+lipcream yang cocok buat warm,lipstik_warm
+liptint buat kulit cool,lipstik_cool
+lipstik untuk kulit netral,lipstik_neutral
+warna apa yang bikin aku keliatan kusem,warna_dihindari
+makasih ya,terima_kasih
+bye bye,pamit
+harga emas hari ini berapa,fallback
+siapa presiden indonesia,fallback
+apa kabar,fallback
+rekomendasi film horor,fallback
+cara masak rendang,fallback

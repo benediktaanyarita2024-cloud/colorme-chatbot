@@ -1,0 +1,420 @@
+{
+  "id": "colorme",
+  "name": "ColorMe Bot",
+  "bot_name": "ColorMe",
+  "description": "Mengenali undertone kulit (warm, cool, neutral) dari ciri sederhana, lalu merekomendasikan warna baju, hijab, lipstik, dan perhiasan.",
+  "avatar": "🎨",
+  "color": "#B83A6B",
+  "greeting": "Halo! Aku ColorMe 🎨. Ceritakan ciri kulitmu (warna urat nadi, perhiasan yang cocok, reaksi kena matahari), atau tanya warna baju, hijab, dan lipstik untuk undertone warm, cool, atau neutral.",
+  "suggestions": [
+    "Cara cek undertone",
+    "Urat nadiku hijau",
+    "Warna hijab untuk warm undertone",
+    "Lipstik untuk cool undertone"
+  ],
+  "fallback": [
+    "Maaf, aku belum paham. Coba ceritakan warna urat nadimu, perhiasan yang cocok, atau tanya warna baju, hijab, dan lipstik untuk undertone tertentu.",
+    "Hmm, pertanyaan itu belum ada di catatanku. Aku bisa bantu soal cara cek undertone, ciri warm/cool/neutral, dan rekomendasi warna baju, hijab, atau lipstik."
+  ],
+  "intents": [
+    {
+      "tag": "salam",
+      "patterns": [
+        "halo",
+        "hai",
+        "selamat pagi",
+        "selamat siang",
+        "selamat malam",
+        "assalamualaikum",
+        "permisi"
+      ],
+      "responses": [
+        "Halo juga! Mau cari tahu undertone kulitmu atau langsung tanya warna yang cocok?",
+        "Hai! Aku {nama_bot}. Ceritakan ciri kulitmu, nanti aku bantu tebak undertone-nya."
+      ]
+    },
+    {
+      "tag": "identitas",
+      "patterns": [
+        "kamu siapa",
+        "ini bot apa",
+        "kamu bisa bantu apa",
+        "kamu bisa apa",
+        "nama kamu siapa",
+        "fungsi bot ini",
+        "bisa bantu apa aja"
+      ],
+      "responses": [
+        "Aku {nama_bot}, asisten personal color. Aku bisa menebak undertone kulitmu dari ciri sederhana dan merekomendasikan warna baju, hijab, lipstik, serta perhiasan.",
+        "Namaku {nama_bot}. Tugasku membantu kamu mengenali undertone (warm, cool, neutral) dan memilih warna yang bikin wajah tampak segar."
+      ]
+    },
+    {
+      "tag": "pengertian_undertone",
+      "patterns": [
+        "undertone",
+        "apa itu undertone",
+        "pengertian undertone",
+        "arti undertone",
+        "maksud undertone",
+        "undertone artinya"
+      ],
+      "responses": [
+        "Undertone adalah warna dasar di bawah permukaan kulit. Ada tiga jenis: warm (kekuningan/keemasan), cool (kemerahan/kebiruan), dan neutral (campuran keduanya).",
+        "Undertone itu rona alami di bawah kulit yang tidak berubah walau kulit menggelap atau memutih. Jenisnya warm, cool, dan neutral."
+      ]
+    },
+    {
+      "tag": "jenis_undertone",
+      "patterns": [
+        "jenis undertone",
+        "macam macam undertone",
+        "undertone ada berapa",
+        "tipe undertone",
+        "bedanya warm cool neutral",
+        "warm cool neutral itu apa"
+      ],
+      "responses": [
+        "Ada tiga: warm (rona kuning keemasan, urat hijau), cool (rona pink kebiruan, urat biru/ungu), dan neutral (campuran, urat sulit dibedakan).",
+        "Undertone dibagi tiga. Warm cocok dengan emas dan earth tone, cool cocok dengan perak dan warna sejuk, neutral cocok dengan hampir semua warna lembut."
+      ]
+    },
+    {
+      "tag": "beda_skintone_undertone",
+      "patterns": [
+        "beda skin tone dan undertone",
+        "skin tone sama undertone sama tidak",
+        "perbedaan skin tone undertone",
+        "skin tone itu apa",
+        "warna kulit sama dengan undertone"
+      ],
+      "responses": [
+        "Skin tone adalah warna kulit yang terlihat (terang, sawo matang, gelap). Undertone adalah warna dasarnya. Dua orang dengan skin tone sama bisa punya undertone berbeda.",
+        "Skin tone bisa berubah karena matahari, tapi undertone tetap. Jadi kulit sawo matang pun bisa warm, cool, atau neutral."
+      ]
+    },
+    {
+      "tag": "manfaat_undertone",
+      "patterns": [
+        "kenapa harus tahu undertone",
+        "pentingnya undertone",
+        "manfaat tahu undertone",
+        "gunanya undertone",
+        "undertone penting tidak"
+      ],
+      "responses": [
+        "Dengan tahu undertone, kamu bisa memilih warna yang bikin wajah tampak cerah dan segar, serta tidak salah beli baju, hijab, atau makeup.",
+        "Warna yang sesuai undertone membuat kulit terlihat lebih bersinar. Warna yang tidak cocok bisa bikin wajah tampak kusam atau pucat."
+      ]
+    },
+    {
+      "tag": "cara_cek_undertone",
+      "patterns": [
+        "cara cek undertone",
+        "bagaimana tahu undertone",
+        "cara mengetahui undertone kulit",
+        "tes undertone",
+        "cek undertone kulit",
+        "menentukan undertone"
+      ],
+      "responses": [
+        "Ada empat cara mudah: lihat warna urat nadi di pergelangan tangan, bandingkan perhiasan emas dan perak, perhatikan reaksi kulit saat kena matahari, atau tempelkan kertas putih ke wajah. Ceritakan hasilnya ke aku, ya!",
+        "Coba lihat urat nadi di pergelangan tangan di bawah cahaya alami. Hijau berarti warm, biru/ungu berarti cool, campuran berarti neutral. Kamu juga bisa tes dengan perhiasan emas vs perak."
+      ]
+    },
+    {
+      "tag": "ciri_urat_hijau",
+      "patterns": [
+        "urat hijau",
+        "urat nadi hijau",
+        "nadi hijau undertone",
+        "urat nadi warna hijau",
+        "pergelangan tangan urat hijau"
+      ],
+      "responses": [
+        "Urat yang terlihat hijau biasanya tanda warm undertone. Cocok dengan earth tone seperti cokelat, mustard, olive, dan peach.",
+        "Kemungkinan kamu warm undertone. Coba pastikan juga dengan tes perhiasan: biasanya kamu lebih cocok memakai emas."
+      ]
+    },
+    {
+      "tag": "ciri_urat_biru",
+      "patterns": [
+        "urat biru",
+        "urat ungu",
+        "urat nadi biru",
+        "nadi ungu",
+        "urat biru ungu"
+      ],
+      "responses": [
+        "Urat biru atau ungu biasanya tanda cool undertone. Cocok dengan navy, ungu, pink, dan abu-abu.",
+        "Kemungkinan kamu cool undertone. Biasanya kamu juga lebih cocok memakai perhiasan perak."
+      ]
+    },
+    {
+      "tag": "ciri_urat_campur",
+      "patterns": [
+        "urat campur",
+        "urat susah dibedakan",
+        "urat hijau biru",
+        "urat campuran",
+        "urat tidak jelas warnanya"
+      ],
+      "responses": [
+        "Kalau uratmu campuran hijau dan biru atau sulit dibedakan, kemungkinan kamu neutral undertone. Hampir semua warna cocok untukmu.",
+        "Urat yang tidak jelas warnanya biasanya tanda neutral undertone. Warna lembut seperti dusty pink, sage, dan taupe pasti aman."
+      ]
+    },
+    {
+      "tag": "ciri_emas",
+      "patterns": [
+        "cocok emas",
+        "lebih cocok perhiasan emas",
+        "kulit bagus pakai emas",
+        "perhiasan emas",
+        "emas lebih cocok"
+      ],
+      "responses": [
+        "Kulit yang tampak lebih cerah dengan perhiasan emas biasanya tanda warm undertone.",
+        "Cocok dengan emas? Itu ciri warm undertone. Pilih juga warna hangat seperti terracotta dan mustard."
+      ]
+    },
+    {
+      "tag": "ciri_perak",
+      "patterns": [
+        "cocok perak",
+        "lebih cocok perhiasan perak",
+        "kulit bagus pakai perak",
+        "perhiasan perak",
+        "perak lebih cocok"
+      ],
+      "responses": [
+        "Kulit yang tampak lebih segar dengan perhiasan perak biasanya tanda cool undertone.",
+        "Cocok dengan perak? Itu ciri cool undertone. Warna sejuk seperti navy dan lavender akan cocok."
+      ]
+    },
+    {
+      "tag": "ciri_emas_perak",
+      "patterns": [
+        "cocok emas dan perak",
+        "emas perak sama cocok",
+        "dua duanya cocok",
+        "semua perhiasan cocok",
+        "emas perak cocok semua"
+      ],
+      "responses": [
+        "Kalau emas dan perak sama-sama cocok, kemungkinan kamu neutral undertone. Kamu bebas memilih perhiasan.",
+        "Cocok dengan keduanya biasanya tanda neutral undertone. Rose gold juga bisa jadi pilihan menarik."
+      ]
+    },
+    {
+      "tag": "ciri_matahari_cokelat",
+      "patterns": [
+        "kulit mudah cokelat kena matahari",
+        "gampang gosong",
+        "kena matahari jadi cokelat",
+        "kulit cepat gelap kena matahari",
+        "jarang terbakar matahari"
+      ],
+      "responses": [
+        "Kulit yang mudah kecokelatan dan jarang terbakar matahari biasanya tanda warm undertone.",
+        "Gampang gosong tapi jarang perih? Itu ciri warm undertone. Tetap pakai sunscreen, ya!"
+      ]
+    },
+    {
+      "tag": "ciri_matahari_merah",
+      "patterns": [
+        "kulit mudah merah kena matahari",
+        "gampang terbakar matahari",
+        "kena matahari jadi merah",
+        "kulit sunburn",
+        "kulit perih kena matahari"
+      ],
+      "responses": [
+        "Kulit yang mudah memerah atau terbakar saat kena matahari biasanya tanda cool undertone.",
+        "Gampang merah dan perih kena matahari? Itu ciri cool undertone. Jangan lupa sunscreen dan pakai ulang tiap 2–3 jam."
+      ]
+    },
+    {
+      "tag": "ciri_kertas_putih",
+      "patterns": [
+        "tes kertas putih",
+        "wajah di samping kertas putih",
+        "kulit kuning di kertas putih",
+        "cara tes kertas putih",
+        "kain putih wajah"
+      ],
+      "responses": [
+        "Tempelkan kertas putih di samping wajah tanpa makeup. Tampak kekuningan berarti warm, kemerahan/pink berarti cool, sulit dibedakan berarti neutral.",
+        "Tes kertas putih: lakukan di cahaya alami. Kuning keemasan = warm, pink kebiruan = cool, tidak jelas = neutral."
+      ]
+    },
+    {
+      "tag": "baju_warm",
+      "patterns": [
+        "warna baju warm undertone",
+        "baju cocok untuk warm",
+        "outfit warm undertone",
+        "warna pakaian warm",
+        "baju untuk kulit warm"
+      ],
+      "responses": [
+        "Untuk warm undertone, pilih earth tone: cokelat, mustard, olive, terracotta, krem, dan peach.",
+        "Baju warna camel, karamel, hijau olive, oranye bata, dan kuning mustard akan bikin warm undertone tampak cerah."
+      ]
+    },
+    {
+      "tag": "baju_cool",
+      "patterns": [
+        "warna baju cool undertone",
+        "baju cocok untuk cool",
+        "outfit cool undertone",
+        "warna pakaian cool",
+        "baju untuk kulit cool"
+      ],
+      "responses": [
+        "Untuk cool undertone, pilih navy, biru, ungu, emerald, abu-abu, pink, dan putih bersih.",
+        "Baju warna lavender, biru royal, hijau emerald, dan merah anggur cocok untuk cool undertone."
+      ]
+    },
+    {
+      "tag": "baju_neutral",
+      "patterns": [
+        "warna baju neutral undertone",
+        "baju cocok untuk neutral",
+        "outfit neutral undertone",
+        "warna pakaian neutral",
+        "baju untuk kulit neutral"
+      ],
+      "responses": [
+        "Neutral undertone cocok dengan hampir semua warna, terutama warna lembut seperti dusty pink, sage, taupe, dan off-white.",
+        "Untuk neutral undertone, warna pastel dan muted seperti mauve, jade, abu-abu muda, dan beige paling aman."
+      ]
+    },
+    {
+      "tag": "hijab_warm",
+      "patterns": [
+        "warna hijab warm undertone",
+        "hijab cocok untuk warm",
+        "kerudung warm undertone",
+        "hijab untuk kulit warm",
+        "jilbab warna apa untuk warm"
+      ],
+      "responses": [
+        "Untuk warm undertone, coba hijab warna milo, mocca, terracotta, olive, mustard, atau nude kecokelatan.",
+        "Hijab warna caramel, rust, khaki, dan peach akan membuat wajah warm undertone tampak lebih cerah."
+      ]
+    },
+    {
+      "tag": "hijab_cool",
+      "patterns": [
+        "warna hijab cool undertone",
+        "hijab cocok untuk cool",
+        "kerudung cool undertone",
+        "hijab untuk kulit cool",
+        "jilbab warna apa untuk cool"
+      ],
+      "responses": [
+        "Untuk cool undertone, coba hijab warna navy, dusty purple, abu-abu, baby blue, atau dusty pink.",
+        "Hijab warna lilac, maroon, biru denim, dan silver gray cocok untuk cool undertone."
+      ]
+    },
+    {
+      "tag": "hijab_neutral",
+      "patterns": [
+        "warna hijab neutral undertone",
+        "hijab cocok untuk neutral",
+        "kerudung neutral undertone",
+        "hijab untuk kulit neutral",
+        "jilbab warna apa untuk neutral"
+      ],
+      "responses": [
+        "Untuk neutral undertone, coba hijab warna dusty rose, sage, taupe, mauve, atau krem.",
+        "Hampir semua warna hijab cocok untuk neutral undertone. Warna soft seperti nude, broken white, dan sage paling serbaguna."
+      ]
+    },
+    {
+      "tag": "lipstik_warm",
+      "patterns": [
+        "lipstik untuk warm undertone",
+        "shade lipstik warm",
+        "warna lipstik cocok warm",
+        "lipstik kulit warm",
+        "lipcream untuk warm"
+      ],
+      "responses": [
+        "Untuk warm undertone, pilih shade nude kecokelatan, coral, peach, merah bata, atau terracotta.",
+        "Shade dengan dasar oranye atau cokelat seperti brick red dan peachy nude paling cocok untuk warm undertone."
+      ]
+    },
+    {
+      "tag": "lipstik_cool",
+      "patterns": [
+        "lipstik untuk cool undertone",
+        "shade lipstik cool",
+        "warna lipstik cocok cool",
+        "lipstik kulit cool",
+        "lipcream untuk cool"
+      ],
+      "responses": [
+        "Untuk cool undertone, pilih shade pink, mauve, berry, plum, atau merah kebiruan.",
+        "Shade dengan dasar biru atau pink seperti berry dan cherry red paling cocok untuk cool undertone."
+      ]
+    },
+    {
+      "tag": "lipstik_neutral",
+      "patterns": [
+        "lipstik untuk neutral undertone",
+        "shade lipstik neutral",
+        "warna lipstik cocok neutral",
+        "lipstik kulit neutral",
+        "lipcream untuk neutral"
+      ],
+      "responses": [
+        "Untuk neutral undertone, pilih shade rosy nude, dusty pink, atau merah klasik.",
+        "Neutral undertone cocok dengan banyak shade. Rosewood, mauve nude, dan true red adalah pilihan aman."
+      ]
+    },
+    {
+      "tag": "warna_dihindari",
+      "patterns": [
+        "warna yang harus dihindari",
+        "warna dihindari",
+        "warna bikin kusam",
+        "warna tidak cocok",
+        "warna bikin wajah pucat"
+      ],
+      "responses": [
+        "Warm sebaiknya menghindari warna dingin mencolok seperti biru es. Cool sebaiknya menghindari oranye dan kuning terang. Neutral sebaiknya menghindari warna neon.",
+        "Secara umum, hindari warna yang berlawanan dengan undertone-mu: warm jangan terlalu banyak abu-abu pucat, cool jangan terlalu banyak oranye, neutral hindari neon."
+      ]
+    },
+    {
+      "tag": "terima_kasih",
+      "patterns": [
+        "terima kasih",
+        "makasih",
+        "thanks",
+        "oke sip",
+        "mantap membantu"
+      ],
+      "responses": [
+        "Sama-sama! Semoga makin percaya diri dengan warna pilihanmu.",
+        "Senang bisa membantu! Tanya lagi kapan saja, ya."
+      ]
+    },
+    {
+      "tag": "pamit",
+      "patterns": [
+        "dadah",
+        "bye",
+        "sampai jumpa",
+        "pamit dulu",
+        "sudah cukup"
+      ],
+      "responses": [
+        "Dadah! Selamat mencoba warna barumu.",
+        "Sampai jumpa! Kembali lagi kalau mau tanya warna lain, ya."
+      ]
+    }
+  ]
+}
