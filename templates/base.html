@@ -3,20 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}Chatbot Tematik{% endblock %}</title>
+  <title>{% block title %}ColorMe Bot{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Silkscreen&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body style="--primary: {% block color %}#334155{% endblock %};">
-  <header class="topbar">
-    <a href="{{ url_for('index') }}" class="brand">🎨 ColorMe Bot</a>
-    {% block header_extra %}{% endblock %}
-  </header>
+<body style="--primary: {% block color %}#C2457F{% endblock %};">
 
-  <main class="container">
-    {% block content %}{% endblock %}
-  </main>
+  <!-- Dekorasi latar: awan dan bintang (murni CSS, tanpa gambar) -->
+  <div class="sky" aria-hidden="true">
+    <span class="cloud c1"></span>
+    <span class="cloud c2"></span>
+    <span class="cloud c3"></span>
+    <span class="cloud c4"></span>
+    <span class="star s1">★</span>
+    <span class="star s2">★</span>
+    <span class="star s3">✦</span>
+    <span class="star s4">★</span>
+    <span class="star s5">✦</span>
+    <span class="star s6">♥</span>
+    <span class="moon">☾</span>
+  </div>
 
-  <footer class="footer">Praktikum Aplikasi Web &middot; Flask</footer>
+  <!-- Jendela utama bergaya desktop retro -->
+  <div class="window">
+    <div class="titlebar">
+      <span class="title">♥ ColorMe Bot ~ personal color helper</span>
+      <span class="win-btns" aria-hidden="true">
+        <span>_</span><span>□</span><span class="x">×</span>
+      </span>
+    </div>
+
+    <div class="addressbar">
+      <span class="nav-arrows" aria-hidden="true">← → ↻</span>
+      <a class="url" href="{{ url_for('index') }}">colorme.bot/{% block url %}chat{% endblock %}</a>
+      {% block header_extra %}{% endblock %}
+    </div>
+
+    <main class="window-body">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+
+  <!-- Taskbar bawah -->
+  <footer class="taskbar">
+    <a class="start" href="{{ url_for('index') }}">★ start ★</a>
+    <span class="task active">🎨 ColorMe</span>
+    <span class="task hide-sm">♡ Praktikum Aplikasi Web · Flask</span>
+    <span class="clock" id="clock"></span>
+  </footer>
+
+  <script>
+    // Jam kecil di taskbar
+    (function () {
+      const el = document.getElementById("clock");
+      const tick = () => {
+        const d = new Date();
+        const pad = (n) => String(n).padStart(2, "0");
+        el.textContent = `${d.getFullYear()}.${pad(d.getMonth() + 1)}.${pad(d.getDate())}  ${pad(d.getHours())}:${pad(d.getMinutes())} ♡`;
+      };
+      tick();
+      setInterval(tick, 30000);
+    })();
+  </script>
   {% block scripts %}{% endblock %}
 </body>
 </html>

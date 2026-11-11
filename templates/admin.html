@@ -2,6 +2,13 @@
 
 {% block title %}Statistik {{ theme.name }}{% endblock %}
 {% block color %}{{ theme.color }}{% endblock %}
+{% block url %}admin/{{ theme.id }}{% endblock %}
+
+{% block header_extra %}
+<nav class="header-actions">
+  <a class="pill" href="{{ url_for('chat_page', theme_id=theme.id) }}">← Kembali ke chat</a>
+</nav>
+{% endblock %}
 
 {% block content %}
 <section class="admin">

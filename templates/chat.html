@@ -1,43 +1,68 @@
 {% extends "base.html" %}
 
-{% block title %}{{ theme.name }} &middot; Chatbot Tematik{% endblock %}
+{% block title %}{{ theme.name }}{% endblock %}
 {% block color %}{{ theme.color }}{% endblock %}
 
 {% block header_extra %}
-<div class="header-actions">
-  <a class="btn-ghost" href="{{ url_for('admin_page', theme_id=theme.id) }}">Statistik</a>
-  <button id="btn-clear" class="btn-ghost" type="button">Hapus riwayat</button>
-</div>
+<nav class="header-actions">
+  <a class="pill" href="{{ url_for('admin_page', theme_id=theme.id) }}">Statistik</a>
+  <button id="btn-clear" class="pill" type="button">Hapus riwayat</button>
+</nav>
 {% endblock %}
 
 {% block content %}
-<section class="chat-card">
-  <div class="chat-header">
-    <div class="avatar">{{ theme.avatar }}</div>
-    <div class="chat-title">
-      <h1>{{ theme.bot_name }}</h1>
-      <p>{{ theme.name }}</p>
+<div class="chat-layout">
+
+  <!-- Panel kiri: profil bot -->
+  <aside class="sidebar">
+    <div class="logo">Color<span>Me</span></div>
+
+    <div class="panel profile">
+      <div class="panel-title">♡ profil bot</div>
+      <div class="profile-avatar">{{ theme.avatar }}</div>
+      <p class="profile-name">{{ theme.bot_name }}</p>
+      <p class="profile-desc">{{ theme.description }}</p>
     </div>
-    <label class="learn-toggle">
-      <input type="checkbox" id="learn-mode"> Mode belajar
-    </label>
-  </div>
 
-  <!-- Area pesan: diisi oleh JavaScript -->
-  <div id="messages" class="messages" aria-live="polite"></div>
+    <div class="panel">
+      <div class="panel-title">★ undertone</div>
+      <ul class="swatches">
+        <li><span class="sw warm"></span>warm</li>
+        <li><span class="sw cool"></span>cool</li>
+        <li><span class="sw neutral"></span>neutral</li>
+      </ul>
+    </div>
+  </aside>
 
-  <!-- Saran pertanyaan cepat -->
-  <div class="suggestions">
-    {% for s in theme.suggestions %}
-    <button type="button" class="chip">{{ s }}</button>
-    {% endfor %}
-  </div>
+  <!-- Panel kanan: chat -->
+  <section class="chat-card">
+    <div class="chat-header">
+      <div class="avatar">{{ theme.avatar }}</div>
+      <div class="chat-title">
+        <h1>{{ theme.bot_name }}</h1>
+        <p><span class="dot"></span> online · siap bantu cari warnamu</p>
+      </div>
+      <label class="learn-toggle">
+        <input type="checkbox" id="learn-mode"> Mode belajar
+      </label>
+    </div>
 
-  <form id="chat-form" class="chat-form" autocomplete="off">
-    <input id="chat-input" type="text" placeholder="Ketik pesan..." maxlength="500" required>
-    <button type="submit">Kirim</button>
-  </form>
-</section>
+    <!-- Area pesan: diisi oleh JavaScript -->
+    <div id="messages" class="messages" aria-live="polite"></div>
+
+    <!-- Saran pertanyaan cepat -->
+    <div class="suggestions">
+      {% for s in theme.suggestions %}
+      <button type="button" class="chip">{{ s }}</button>
+      {% endfor %}
+    </div>
+
+    <form id="chat-form" class="chat-form" autocomplete="off">
+      <input id="chat-input" type="text" placeholder="Ketik pesan... ♡" maxlength="500" required>
+      <button type="submit">Kirim ▶</button>
+    </form>
+  </section>
+</div>
 {% endblock %}
 
 {% block scripts %}
